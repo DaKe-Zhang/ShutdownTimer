@@ -8,3 +8,6 @@ C:\Users\dzhang3.OUHSC\Documents\GitHub\ShutDownTimer\ShutdownTimer\ShutdownTime
 C:\Users\dzhang3.OUHSC\Documents\GitHub\ShutDownTimer\ShutdownTimer\ShutdownTimer\obj\Debug\ShutdownTimer.csproj.GenerateResource.Cache
 C:\Users\dzhang3.OUHSC\Documents\GitHub\ShutDownTimer\ShutdownTimer\ShutdownTimer\obj\Debug\ShutdownTimer.exe
 C:\Users\dzhang3.OUHSC\Documents\GitHub\ShutDownTimer\ShutdownTimer\ShutdownTimer\obj\Debug\ShutdownTimer.pdb
+E:\C# project\shutDownTimer\ShutdownTimer\bin\Debug\ShutdownTimer.exe.config
+E:\C# project\shutDownTimer\ShutdownTimer\obj\Debug\ShutdownTimer.exe
+E:\C# project\shutDownTimer\ShutdownTimer\obj\Debug\ShutdownTimer.pdb
