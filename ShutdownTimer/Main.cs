@@ -195,7 +195,7 @@ namespace ShutdownTimer
             numWarn.Enabled = chkWarn.Checked;
             InitializeNotifyContextMenu();
             InitializePowerContextMenu();
-            currentLanguage = chkVietnamese.Checked ? vietnamese : english;
+            currentLanguage = chkVietnamese.Checked ? english :vietnamese;
             InitializeLanguage();
         }
 
@@ -335,7 +335,7 @@ namespace ShutdownTimer
 
         private void chkVietnamese_CheckedChanged(object sender, EventArgs e)
         {
-            currentLanguage = chkVietnamese.Checked ? vietnamese : english;
+            currentLanguage = chkVietnamese.Checked ? english: vietnamese ;
             InitializeLanguage();
         }
 

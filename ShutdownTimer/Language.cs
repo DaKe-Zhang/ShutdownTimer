@@ -34,7 +34,7 @@ namespace ShutdownTimer
         {
             Items.Add("Main.Bar.PowerMenu.Shutdown", "Shutdown Now");
             Items.Add("Main.Bar.PowerMenu.Restart", "Restart Now");
-            Items.Add("Main.GroupBoxTime.Title", "Set time");
+            Items.Add("Main.GroupBoxTime.Title", "Set timer");
             Items.Add("Main.ButtonSet", "Set");
             Items.Add("Main.ButtonCancel", "Cancel");
             Items.Add("Main.Option.Title", "Options");
