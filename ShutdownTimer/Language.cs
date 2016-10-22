@@ -2,7 +2,7 @@
 
 namespace ShutdownTimer
 {
-    public enum LanguageName { English, Vietnamese};
+    public enum LanguageName { English, chinese};
 
     public class Language
     {
@@ -21,8 +21,8 @@ namespace ShutdownTimer
             Items = new Dictionary<string, string>();
             switch (langName)
             {
-                case LanguageName.Vietnamese:
-                    Vietnamese();
+                case LanguageName.chinese:
+                    chinese();
                     break;
                 case LanguageName.English:
                     English();
@@ -43,7 +43,7 @@ namespace ShutdownTimer
             Items.Add("Main.Option.Radio.SignOut", "Sign out");
             Items.Add("Main.Option.Check.UseHybridBoot", "Use Hybrid boot");
             Items.Add("Main.Option.Check.ForceStop", "Force stop");
-            Items.Add("Main.Option.Check.UseVietnamese", "Use Vietnamese interface");
+            Items.Add("Main.Option.Check.Usechinese", "Use chinese interface");
             Items.Add("Main.Option.Check.WarnBefore", "Warn before:");
             Items.Add("Main.Option.Check.minute", "minute(s)");
             Items.Add("Main.Run.TimeRemaining", "Time remaining:");
@@ -66,40 +66,40 @@ namespace ShutdownTimer
             Items.Add("About.ButtonClose", "Close");
         }
 
-        public void Vietnamese()
+        public void chinese()
         {
-            Items.Add("Main.Bar.PowerMenu.Shutdown", "Tắt máy ngay");
-            Items.Add("Main.Bar.PowerMenu.Restart", "Khởi động lại ngay");
-            Items.Add("Main.GroupBoxTime.Title", "Đặt giờ");
-            Items.Add("Main.ButtonSet", "Đặt giờ");
-            Items.Add("Main.ButtonCancel", "Hủy bỏ");
-            Items.Add("Main.Option.Title", "Tùy chọn");
-            Items.Add("Main.Option.Radio.Shutdown", "Tắt máy");
-            Items.Add("Main.Option.Radio.Restart", "Khởi động lại");
-            Items.Add("Main.Option.Radio.SignOut", "Đăng xuất");
-            Items.Add("Main.Option.Check.UseHybridBoot", "Dùng Hybrid boot");
-            Items.Add("Main.Option.Check.ForceStop", "Buộc dừng");
-            Items.Add("Main.Option.Check.UseVietnamese", "Dùng giao diện tiếng Việt");
-            Items.Add("Main.Option.Check.WarnBefore", "Nhắc trước:");
-            Items.Add("Main.Option.Check.minute", "phút");
-            Items.Add("Main.Run.TimeRemaining", "Thời gian chờ:");
+            Items.Add("Main.Bar.PowerMenu.Shutdown", "立刻关机");
+            Items.Add("Main.Bar.PowerMenu.Restart", "立刻重启");
+            Items.Add("Main.GroupBoxTime.Title", "设置时间");
+            Items.Add("Main.ButtonSet", "开始");
+            Items.Add("Main.ButtonCancel", "取消");
+            Items.Add("Main.Option.Title", "设置");
+            Items.Add("Main.Option.Radio.Shutdown", "关机");
+            Items.Add("Main.Option.Radio.Restart", "重启");
+            Items.Add("Main.Option.Radio.SignOut", "注销");
+            Items.Add("Main.Option.Check.UseHybridBoot", "省电模式");
+            Items.Add("Main.Option.Check.ForceStop", "强制关闭");
+            Items.Add("Main.Option.Check.Usechinese", "中文界面");
+            Items.Add("Main.Option.Check.WarnBefore", "警告:");
+            Items.Add("Main.Option.Check.minute", "分钟");
+            Items.Add("Main.Run.TimeRemaining", "剩余时间:");
 
-            Items.Add("Notification.Options", "Tùy chọn");
-            Items.Add("Notification.Shutdown", "Tắt máy ngay");
-            Items.Add("Notification.Restart", "Khởi động lại ngay");
-            Items.Add("Notification.Exit", "Thoát");
-            Items.Add("Notification.Balloon.Warn.Title", "Bạn chuẩn bị đăng xuất");
-            Items.Add("Notification.Balloon.Warn.Detail", "Còn lại khoảng {0} phút");
+            Items.Add("Notification.Options", "设置");
+            Items.Add("Notification.Shutdown", "立刻关机");
+            Items.Add("Notification.Restart", "立刻重启");
+            Items.Add("Notification.Exit", "退出");
+            Items.Add("Notification.Balloon.Warn.Title", "电脑即将关闭");
+            Items.Add("Notification.Balloon.Warn.Detail", "剩余时间 {0} 分钟");
 
-            Items.Add("Status.Default", "Chọn giờ sau đó bấm \"Đặt giờ\" để bắt đầu");
-            Items.Add("Status.TaskCompleted", "Đã đặt giờ. Bấm \"Hủy bỏ\" để hủy tác vụ");
+            Items.Add("Status.Default", "点击 开始 键后开始计时");
+            Items.Add("Status.TaskCompleted", "时间已经设定. 点击 \"取消\" 取消任务");
 
-            Items.Add("Message.Exit.Title", "Thoát chương trình");
-            Items.Add("Message.Exit.Text", "Bạn có muốn hủy đặt giờ và thoát chương trình?");
+            Items.Add("Message.Exit.Title", "退出程序");
+            Items.Add("Message.Exit.Text", "你确定要退出吗?");
 
-            Items.Add("About.Title", "Thông tin");
-            Items.Add("About.Version", "Phiên bản: ");
-            Items.Add("About.ButtonClose", "Đóng");
+            Items.Add("About.Title", "关于");
+            Items.Add("About.Version", "版本: ");
+            Items.Add("About.ButtonClose", "关闭");
         }
     }
 }

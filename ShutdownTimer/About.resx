@@ -118,16 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="richTextBox1.Text" xml:space="preserve">
-    <value>Shutdown Timer là một ứng dụng nhỏ giúp hẹn giờ thực hiện các tác vụ tắt máy, khởi động lại, đăng xuất một cách đơn giản.
-
-Phiên bản 2.0:
-* Thêm tính năng nhắc nhở
-* Thêm Taskbar icon
-* Thêm giao diện tiếng Việt/Anh
-* Sửa lỗi đã biết
-
-Yêu cầu:
-* Windows 7 trở lên
+    <value>Shutdown Timer Thanks to Nguyễn Tuấn to offer this on github.
+* Chinese version added by Dake Zhang
+    
+* Windows 7 or newer
 * .NET Framework 4.5
 
 ** Tùy chọn HYBRID BOOT: Tùy chọn này có sẵn từ Windows 8 trở lên, cho phép máy tính khởi động với tốc độ nhanh hơn so với Windows 7.</value>

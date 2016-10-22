@@ -83,7 +83,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(176, 15);
             this.label6.TabIndex = 7;
-            this.label6.Text = "Copyright © 2015 Nguyễn Tuấn";
+            this.label6.Text = "Copyright © 2016 Nguyễn Tuấn";
             // 
             // btnClose
             // 

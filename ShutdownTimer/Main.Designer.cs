@@ -31,17 +31,24 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.pnlTitle = new System.Windows.Forms.Panel();
-            this.btnPowerMenu = new ShutdownTimer.MenuButton();
             this.btnInfo = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlStatus = new System.Windows.Forms.Panel();
             this.lblStatus = new System.Windows.Forms.Label();
             this.pnlMain = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.grbOptions = new System.Windows.Forms.GroupBox();
             this.lblminutes = new System.Windows.Forms.Label();
             this.numWarn = new System.Windows.Forms.NumericUpDown();
             this.chkWarn = new System.Windows.Forms.CheckBox();
-            this.chkVietnamese = new System.Windows.Forms.CheckBox();
+            this.chkchinese = new System.Windows.Forms.CheckBox();
             this.chkForce = new System.Windows.Forms.CheckBox();
             this.chkHybridOn = new System.Windows.Forms.CheckBox();
             this.radSignOut = new System.Windows.Forms.RadioButton();
@@ -61,9 +68,14 @@
             this.prgTask = new System.Windows.Forms.ProgressBar();
             this.tmrTime = new System.Windows.Forms.Timer(this.components);
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.btnPowerMenu = new ShutdownTimer.MenuButton();
             this.pnlTitle.SuspendLayout();
             this.pnlStatus.SuspendLayout();
             this.pnlMain.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             this.grbOptions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numWarn)).BeginInit();
             this.grbSetTime.SuspendLayout();
@@ -83,27 +95,8 @@
             this.pnlTitle.ForeColor = System.Drawing.Color.White;
             this.pnlTitle.Location = new System.Drawing.Point(0, 0);
             this.pnlTitle.Name = "pnlTitle";
-            this.pnlTitle.Size = new System.Drawing.Size(370, 38);
+            this.pnlTitle.Size = new System.Drawing.Size(362, 38);
             this.pnlTitle.TabIndex = 0;
-            // 
-            // btnPowerMenu
-            // 
-            this.btnPowerMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(186)))), ((int)(((byte)(223)))));
-            this.btnPowerMenu.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnPowerMenu.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnPowerMenu.FlatAppearance.BorderSize = 0;
-            this.btnPowerMenu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(138)))), ((int)(((byte)(177)))));
-            this.btnPowerMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(210)))), ((int)(((byte)(235)))));
-            this.btnPowerMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPowerMenu.ForeColor = System.Drawing.Color.White;
-            this.btnPowerMenu.Image = global::ShutdownTimer.Properties.Resources.icon_power_24;
-            this.btnPowerMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPowerMenu.Location = new System.Drawing.Point(277, 0);
-            this.btnPowerMenu.Name = "btnPowerMenu";
-            this.btnPowerMenu.Size = new System.Drawing.Size(49, 38);
-            this.btnPowerMenu.TabIndex = 6;
-            this.btnPowerMenu.UseVisualStyleBackColor = false;
-            this.btnPowerMenu.Click += new System.EventHandler(this.btnPowerMenu_Click);
             // 
             // btnInfo
             // 
@@ -116,7 +109,7 @@
             this.btnInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInfo.ForeColor = System.Drawing.Color.White;
             this.btnInfo.Image = global::ShutdownTimer.Properties.Resources.icon_info_24;
-            this.btnInfo.Location = new System.Drawing.Point(326, 0);
+            this.btnInfo.Location = new System.Drawing.Point(318, 0);
             this.btnInfo.Name = "btnInfo";
             this.btnInfo.Size = new System.Drawing.Size(44, 38);
             this.btnInfo.TabIndex = 5;
@@ -139,9 +132,9 @@
             this.pnlStatus.Controls.Add(this.lblStatus);
             this.pnlStatus.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlStatus.ForeColor = System.Drawing.Color.White;
-            this.pnlStatus.Location = new System.Drawing.Point(0, 293);
+            this.pnlStatus.Location = new System.Drawing.Point(0, 380);
             this.pnlStatus.Name = "pnlStatus";
-            this.pnlStatus.Size = new System.Drawing.Size(370, 25);
+            this.pnlStatus.Size = new System.Drawing.Size(362, 25);
             this.pnlStatus.TabIndex = 1;
             // 
             // lblStatus
@@ -155,27 +148,131 @@
             // 
             // pnlMain
             // 
+            this.pnlMain.Controls.Add(this.button1);
+            this.pnlMain.Controls.Add(this.groupBox1);
             this.pnlMain.Controls.Add(this.grbOptions);
             this.pnlMain.Controls.Add(this.btnSet);
             this.pnlMain.Controls.Add(this.grbSetTime);
             this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMain.Location = new System.Drawing.Point(0, 38);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(370, 255);
+            this.pnlMain.Size = new System.Drawing.Size(362, 342);
             this.pnlMain.TabIndex = 2;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Silver;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.button1.Location = new System.Drawing.Point(254, 93);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(98, 56);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Set";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.numericUpDown1);
+            this.groupBox1.Controls.Add(this.numericUpDown2);
+            this.groupBox1.Controls.Add(this.numericUpDown3);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Location = new System.Drawing.Point(17, 87);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(228, 64);
+            this.groupBox1.TabIndex = 6;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Set time";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.numericUpDown1.Location = new System.Drawing.Point(157, 22);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            59,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(45, 30);
+            this.numericUpDown1.TabIndex = 0;
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.numericUpDown2.Location = new System.Drawing.Point(86, 22);
+            this.numericUpDown2.Maximum = new decimal(new int[] {
+            59,
+            0,
+            0,
+            0});
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(45, 30);
+            this.numericUpDown2.TabIndex = 1;
+            // 
+            // numericUpDown3
+            // 
+            this.numericUpDown3.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.numericUpDown3.Location = new System.Drawing.Point(15, 22);
+            this.numericUpDown3.Maximum = new decimal(new int[] {
+            24,
+            0,
+            0,
+            0});
+            this.numericUpDown3.Name = "numericUpDown3";
+            this.numericUpDown3.Size = new System.Drawing.Size(45, 30);
+            this.numericUpDown3.TabIndex = 2;
+            this.numericUpDown3.ValueChanged += new System.EventHandler(this.numericUpDown3_ValueChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label2.Location = new System.Drawing.Point(203, 26);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(20, 22);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "s";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label6.Location = new System.Drawing.Point(134, 26);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(20, 22);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "m";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label7.Location = new System.Drawing.Point(63, 26);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(20, 22);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "h";
             // 
             // grbOptions
             // 
             this.grbOptions.Controls.Add(this.lblminutes);
             this.grbOptions.Controls.Add(this.numWarn);
             this.grbOptions.Controls.Add(this.chkWarn);
-            this.grbOptions.Controls.Add(this.chkVietnamese);
+            this.grbOptions.Controls.Add(this.chkchinese);
             this.grbOptions.Controls.Add(this.chkForce);
             this.grbOptions.Controls.Add(this.chkHybridOn);
             this.grbOptions.Controls.Add(this.radSignOut);
             this.grbOptions.Controls.Add(this.radRestart);
             this.grbOptions.Controls.Add(this.radShutdown);
-            this.grbOptions.Location = new System.Drawing.Point(17, 76);
+            this.grbOptions.Location = new System.Drawing.Point(17, 166);
             this.grbOptions.Name = "grbOptions";
             this.grbOptions.Size = new System.Drawing.Size(335, 113);
             this.grbOptions.TabIndex = 5;
@@ -224,18 +321,18 @@
             this.chkWarn.UseVisualStyleBackColor = true;
             this.chkWarn.CheckedChanged += new System.EventHandler(this.chkWarn_CheckedChanged);
             // 
-            // chkVietnamese
+            // chkchinese
             // 
-            this.chkVietnamese.AutoSize = true;
-            this.chkVietnamese.Checked = true;
-            this.chkVietnamese.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkVietnamese.Location = new System.Drawing.Point(116, 48);
-            this.chkVietnamese.Name = "chkVietnamese";
-            this.chkVietnamese.Size = new System.Drawing.Size(158, 19);
-            this.chkVietnamese.TabIndex = 10;
-            this.chkVietnamese.Text = "Use Vietnamese interface";
-            this.chkVietnamese.UseVisualStyleBackColor = true;
-            this.chkVietnamese.CheckedChanged += new System.EventHandler(this.chkVietnamese_CheckedChanged);
+            this.chkchinese.AutoSize = true;
+            this.chkchinese.Checked = true;
+            this.chkchinese.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkchinese.Location = new System.Drawing.Point(116, 48);
+            this.chkchinese.Name = "chkchinese";
+            this.chkchinese.Size = new System.Drawing.Size(137, 19);
+            this.chkchinese.TabIndex = 10;
+            this.chkchinese.Text = "Use chinese interface";
+            this.chkchinese.UseVisualStyleBackColor = true;
+            this.chkchinese.CheckedChanged += new System.EventHandler(this.chkchinese_CheckedChanged);
             // 
             // chkForce
             // 
@@ -326,6 +423,7 @@
             this.grbSetTime.TabIndex = 0;
             this.grbSetTime.TabStop = false;
             this.grbSetTime.Text = "Set time";
+            this.grbSetTime.Enter += new System.EventHandler(this.grbSetTime_Enter);
             // 
             // numS
             // 
@@ -403,9 +501,9 @@
             this.pnlTask.Controls.Add(this.lblTimeRemaining);
             this.pnlTask.Controls.Add(this.prgTask);
             this.pnlTask.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlTask.Location = new System.Drawing.Point(0, 236);
+            this.pnlTask.Location = new System.Drawing.Point(0, 323);
             this.pnlTask.Name = "pnlTask";
-            this.pnlTask.Size = new System.Drawing.Size(370, 57);
+            this.pnlTask.Size = new System.Drawing.Size(362, 57);
             this.pnlTask.TabIndex = 3;
             this.pnlTask.Visible = false;
             // 
@@ -449,13 +547,32 @@
             this.notifyIcon.Text = "Shutdown Timer";
             this.notifyIcon.Visible = true;
             // 
+            // btnPowerMenu
+            // 
+            this.btnPowerMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(186)))), ((int)(((byte)(223)))));
+            this.btnPowerMenu.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnPowerMenu.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnPowerMenu.FlatAppearance.BorderSize = 0;
+            this.btnPowerMenu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(138)))), ((int)(((byte)(177)))));
+            this.btnPowerMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(210)))), ((int)(((byte)(235)))));
+            this.btnPowerMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPowerMenu.ForeColor = System.Drawing.Color.White;
+            this.btnPowerMenu.Image = global::ShutdownTimer.Properties.Resources.icon_power_24;
+            this.btnPowerMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPowerMenu.Location = new System.Drawing.Point(269, 0);
+            this.btnPowerMenu.Name = "btnPowerMenu";
+            this.btnPowerMenu.Size = new System.Drawing.Size(49, 38);
+            this.btnPowerMenu.TabIndex = 6;
+            this.btnPowerMenu.UseVisualStyleBackColor = false;
+            this.btnPowerMenu.Click += new System.EventHandler(this.btnPowerMenu_Click);
+            // 
             // frmMain
             // 
             this.AcceptButton = this.btnSet;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(370, 318);
+            this.ClientSize = new System.Drawing.Size(362, 405);
             this.Controls.Add(this.pnlTask);
             this.Controls.Add(this.pnlMain);
             this.Controls.Add(this.pnlStatus);
@@ -473,6 +590,11 @@
             this.pnlStatus.ResumeLayout(false);
             this.pnlStatus.PerformLayout();
             this.pnlMain.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
             this.grbOptions.ResumeLayout(false);
             this.grbOptions.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numWarn)).EndInit();
@@ -516,10 +638,18 @@
         internal System.Windows.Forms.Button btnInfo;
         internal ShutdownTimer.MenuButton btnPowerMenu;
         private System.Windows.Forms.CheckBox chkWarn;
-        private System.Windows.Forms.CheckBox chkVietnamese;
+        private System.Windows.Forms.CheckBox chkchinese;
         private System.Windows.Forms.Label lblminutes;
         private System.Windows.Forms.NumericUpDown numWarn;
         private System.Windows.Forms.NotifyIcon notifyIcon;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }
 

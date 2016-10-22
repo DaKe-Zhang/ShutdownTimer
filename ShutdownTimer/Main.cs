@@ -195,7 +195,7 @@ namespace ShutdownTimer
             numWarn.Enabled = chkWarn.Checked;
             InitializeNotifyContextMenu();
             InitializePowerContextMenu();
-            currentLanguage = chkVietnamese.Checked ? english :vietnamese;
+            currentLanguage = chkchinese.Checked ? english :chinese;
             InitializeLanguage();
         }
 
@@ -287,6 +287,26 @@ namespace ShutdownTimer
             notifyIcon.ContextMenuStrip.Items.Add("E&xit", null, Exit_click);
         }
 
+        private void grbSetTime_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericUpDown3_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void Option_click(object sender, EventArgs e)
         {
             if (WindowState == FormWindowState.Minimized)
@@ -303,7 +323,7 @@ namespace ShutdownTimer
 
         #region Language
         public Language currentLanguage;
-        Language vietnamese = new Language(LanguageName.Vietnamese);
+        Language chinese = new Language(LanguageName.chinese);
         Language english = new Language(LanguageName.English);
 
         private void InitializeLanguage()
@@ -318,7 +338,7 @@ namespace ShutdownTimer
             radSignOut.Text = currentLanguage.Items["Main.Option.Radio.SignOut"];
             chkHybridOn.Text = currentLanguage.Items["Main.Option.Check.UseHybridBoot"];
             chkForce.Text = currentLanguage.Items["Main.Option.Check.ForceStop"];
-            chkVietnamese.Text = currentLanguage.Items["Main.Option.Check.UseVietnamese"];
+            chkchinese.Text = currentLanguage.Items["Main.Option.Check.Usechinese"];
             chkWarn.Text = currentLanguage.Items["Main.Option.Check.WarnBefore"];
             lblminutes.Text = currentLanguage.Items["Main.Option.Check.minute"];
             lblTimeRemaining.Text = currentLanguage.Items["Main.Run.TimeRemaining"];
@@ -333,9 +353,9 @@ namespace ShutdownTimer
             lblStatus.Text = IsSet ? currentLanguage.Items["Status.TaskCompleted"] : currentLanguage.Items["Status.Default"];
         }
 
-        private void chkVietnamese_CheckedChanged(object sender, EventArgs e)
+        private void chkchinese_CheckedChanged(object sender, EventArgs e)
         {
-            currentLanguage = chkVietnamese.Checked ? english: vietnamese ;
+            currentLanguage = chkchinese.Checked ? english: chinese ;
             InitializeLanguage();
         }
 
