@@ -36,6 +36,7 @@
             this.pnlStatus = new System.Windows.Forms.Panel();
             this.lblStatus = new System.Windows.Forms.Label();
             this.pnlMain = new System.Windows.Forms.Panel();
+            this.currentTime = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
@@ -68,6 +69,7 @@
             this.prgTask = new System.Windows.Forms.ProgressBar();
             this.tmrTime = new System.Windows.Forms.Timer(this.components);
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.btnPowerMenu = new ShutdownTimer.MenuButton();
             this.pnlTitle.SuspendLayout();
             this.pnlStatus.SuspendLayout();
@@ -132,7 +134,7 @@
             this.pnlStatus.Controls.Add(this.lblStatus);
             this.pnlStatus.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlStatus.ForeColor = System.Drawing.Color.White;
-            this.pnlStatus.Location = new System.Drawing.Point(0, 380);
+            this.pnlStatus.Location = new System.Drawing.Point(0, 405);
             this.pnlStatus.Name = "pnlStatus";
             this.pnlStatus.Size = new System.Drawing.Size(362, 25);
             this.pnlStatus.TabIndex = 1;
@@ -148,6 +150,7 @@
             // 
             // pnlMain
             // 
+            this.pnlMain.Controls.Add(this.currentTime);
             this.pnlMain.Controls.Add(this.button1);
             this.pnlMain.Controls.Add(this.groupBox1);
             this.pnlMain.Controls.Add(this.grbOptions);
@@ -156,8 +159,18 @@
             this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMain.Location = new System.Drawing.Point(0, 38);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(362, 342);
+            this.pnlMain.Size = new System.Drawing.Size(362, 367);
             this.pnlMain.TabIndex = 2;
+            // 
+            // currentTime
+            // 
+            this.currentTime.AutoSize = true;
+            this.currentTime.Location = new System.Drawing.Point(28, 163);
+            this.currentTime.Name = "currentTime";
+            this.currentTime.Size = new System.Drawing.Size(34, 15);
+            this.currentTime.TabIndex = 8;
+            this.currentTime.Text = "Time";
+            this.currentTime.Click += new System.EventHandler(this.currentTime_Click);
             // 
             // button1
             // 
@@ -169,7 +182,7 @@
             this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.button1.Location = new System.Drawing.Point(254, 93);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 56);
+            this.button1.Size = new System.Drawing.Size(98, 58);
             this.button1.TabIndex = 7;
             this.button1.Text = "Set";
             this.button1.UseVisualStyleBackColor = false;
@@ -272,7 +285,7 @@
             this.grbOptions.Controls.Add(this.radSignOut);
             this.grbOptions.Controls.Add(this.radRestart);
             this.grbOptions.Controls.Add(this.radShutdown);
-            this.grbOptions.Location = new System.Drawing.Point(17, 166);
+            this.grbOptions.Location = new System.Drawing.Point(15, 191);
             this.grbOptions.Name = "grbOptions";
             this.grbOptions.Size = new System.Drawing.Size(335, 113);
             this.grbOptions.TabIndex = 5;
@@ -501,7 +514,7 @@
             this.pnlTask.Controls.Add(this.lblTimeRemaining);
             this.pnlTask.Controls.Add(this.prgTask);
             this.pnlTask.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlTask.Location = new System.Drawing.Point(0, 323);
+            this.pnlTask.Location = new System.Drawing.Point(0, 348);
             this.pnlTask.Name = "pnlTask";
             this.pnlTask.Size = new System.Drawing.Size(362, 57);
             this.pnlTask.TabIndex = 3;
@@ -547,6 +560,10 @@
             this.notifyIcon.Text = "Shutdown Timer";
             this.notifyIcon.Visible = true;
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
+            // 
             // btnPowerMenu
             // 
             this.btnPowerMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(186)))), ((int)(((byte)(223)))));
@@ -572,7 +589,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(362, 405);
+            this.ClientSize = new System.Drawing.Size(362, 430);
             this.Controls.Add(this.pnlTask);
             this.Controls.Add(this.pnlMain);
             this.Controls.Add(this.pnlStatus);
@@ -590,6 +607,7 @@
             this.pnlStatus.ResumeLayout(false);
             this.pnlStatus.PerformLayout();
             this.pnlMain.ResumeLayout(false);
+            this.pnlMain.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
@@ -644,12 +662,14 @@
         private System.Windows.Forms.NotifyIcon notifyIcon;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Label currentTime;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

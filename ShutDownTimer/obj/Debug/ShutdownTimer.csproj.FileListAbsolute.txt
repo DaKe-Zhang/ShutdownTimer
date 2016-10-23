@@ -11,3 +11,10 @@ C:\Users\dzhang3.OUHSC\Documents\GitHub\ShutDownTimer\ShutdownTimer\ShutdownTime
 E:\C# project\shutDownTimer\ShutdownTimer\bin\Debug\ShutdownTimer.exe.config
 E:\C# project\shutDownTimer\ShutdownTimer\obj\Debug\ShutdownTimer.exe
 E:\C# project\shutDownTimer\ShutdownTimer\obj\Debug\ShutdownTimer.pdb
+E:\C# project\shutDownTimer\ShutdownTimer\bin\Debug\ShutdownTimer.exe
+E:\C# project\shutDownTimer\ShutdownTimer\bin\Debug\ShutdownTimer.pdb
+E:\C# project\shutDownTimer\ShutdownTimer\obj\Debug\ShutdownTimer.csprojResolveAssemblyReference.cache
+E:\C# project\shutDownTimer\ShutdownTimer\obj\Debug\ShutdownTimer.frmAbout.resources
+E:\C# project\shutDownTimer\ShutdownTimer\obj\Debug\ShutdownTimer.frmMain.resources
+E:\C# project\shutDownTimer\ShutdownTimer\obj\Debug\ShutdownTimer.Properties.Resources.resources
+E:\C# project\shutDownTimer\ShutdownTimer\obj\Debug\ShutdownTimer.csproj.GenerateResource.Cache

@@ -20,6 +20,8 @@ namespace ShutdownTimer
         public frmMain()
         {
             InitializeComponent();
+
+            timer1.Start();
         }
 
         /// <summary>
@@ -303,6 +305,17 @@ namespace ShutdownTimer
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick_1(object sender, EventArgs e)
+        {
+            DateTime time = DateTime.Now;
+            this.currentTime.Text = time.ToString();
+        }
+
+        private void currentTime_Click(object sender, EventArgs e)
         {
 
         }
